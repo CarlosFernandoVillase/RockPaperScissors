@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="JavaScript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  <title>Rock, Paper, Scissors</title>
+  <script>
+    var i=0;
+    $(document).ready(function(){
+      $("#p1r").show();
+      $("#p1p").hide();
+      $("#p1s").hide();
+      $("#p2r").show();
+      $("#p2p").hide();
+      $("#p2s").hide();
+      $("#YW").hide();
+      $("#TA").hide();
+      $("#YL").hide();     
+      $("#butt1").click(function(){
+        var randomNumber1 = Math.floor((Math.random() * 3) + 1);
+        $("#p1r").show();
+        $("#p1p").hide();
+        $("#p1s").hide();
+
+        $("#YW").hide();
+        $("#TA").hide();
+        $("#YL").show();  
+        if (randomNumber1 == 1 ) {
+          $("#p2r").show();
+          $("#p2p").hide();
+          $("#p2s").hide();
+
+          $("#YW").hide();
+          $("#TA").show();
+          $("#YL").hide();  
+          $(".numba").text(i);
+        }
+        else if (randomNumber1 == 2 ) {
+          $("#p2r").hide();
+          $("#p2p").show();
+          $("#p2s").hide();    
+          
+          $("#YW").hide();
+          $("#TA").hide();
+          $("#YL").show();
+          i=0;
+          $(".numba").text(i);
+        }        
+        else if (randomNumber1 == 3 ) {
+          $("#p2r").hide();
+          $("#p2p").hide();
+          $("#p2s").show();  
+           
+          $("#YW").show();
+          $("#TA").hide();
+          $("#YL").hide();   
+          ++i;  
+          $(".numba").text(i);
+        }
+      });
+      $("#butt2").click(function(){
+        var randomNumber1 = Math.floor((Math.random() * 3) + 1);
+        $("#p1r").hide();
+        $("#p1p").show();
+        $("#p1s").hide();
+        if (randomNumber1 == 1 ) {
+          $("#p2r").show();
+          $("#p2p").hide();
+          $("#p2s").hide();
+
+          $("#YW").show();
+          $("#TA").hide();
+          $("#YL").hide();    
+          ++i;   
+          $(".numba").text(i);
+        }
+        else if (randomNumber1 == 2 ) {
+          $("#p2r").hide();
+          $("#p2p").show();
+          $("#p2s").hide();   
+          
+          $("#YW").hide();
+          $("#TA").show();
+          $("#YL").hide();  
+          $(".numba").text(i);
+        }        
+        else if (randomNumber1 == 3 ) {
+          $("#p2r").hide();
+          $("#p2p").hide();
+          $("#p2s").show();  
+          
+          $("#YW").hide();
+          $("#TA").hide();
+          $("#YL").show();  
+          i=0;
+          $(".numba").text(i);
+        }
+      });
+      $("#butt3").click(function(){
+        var randomNumber1 = Math.floor((Math.random() * 3) + 1);
+        $("#p1r").hide();
+        $("#p1p").hide();
+        $("#p1s").show();
+        if (randomNumber1 == 1 ) {
+          $("#p2r").show();
+          $("#p2p").hide();
+          $("#p2s").hide();
+
+          $("#YW").hide();
+          $("#TA").hide();
+          $("#YL").show();  
+          i=0;  
+          $(".numba").text(i);
+        }
+        else if (randomNumber1 == 2 ) {
+          $("#p2r").hide();
+          $("#p2p").show();
+          $("#p2s").hide();  
+          
+          $("#YW").show();
+          $("#TA").hide();
+          $("#YL").hide();     
+          ++i;
+          $(".numba").text(i);
+        }        
+        else if (randomNumber1 == 3 ) {
+          $("#p2r").hide();
+          $("#p2p").hide();
+          $("#p2s").show();     
+          
+          $("#YW").hide();
+          $("#TA").show();
+          $("#YL").hide();  
+          $(".numba").text(i);
+        }
+      });
+    });
+    </script>
+</head>
+<body>
+  
+  <div class="box">
+    <span class="b">
+      <img src="/images/logo.svg"/>
+    </span> 
+    <span class="b" style="float: right;">
+      <div class="score">
+        <b  style="color: #8392d5;">Score</b>
+        <p class="numba">0</p>
+      </div>
+    </span>
+  </div>
+
+  <br>
+
+  <div class="thebutts">
+    <button id="butt1">Rock</button>
+    <button id="butt2">Paper</button>
+    <button id="butt3">Scissors</button>
+  </div>
+
+  <div class="Bbox2">
+    <div class="box2">
+      <p style="text-align: center;">You Picked</p>
+      <br>
+      <br>
+      <div class="rpsDAD" id="p1r">
+        <svg class="rpsC" height="150" width="150">
+          <circle cx="75" cy="75" r="75" fill="red" />
+          <circle cx="75" cy="75" r="60" fill="white" />
+        </svg> 
+        <img class="rpsH" src="/images/icon-rock.svg"/>
+      </div>
+
+      <div class="rpsDAD" id="p1p">
+        <svg class="rpsC" height="150" width="150">
+          <circle cx="75" cy="75" r="75" fill="blue" />
+          <circle cx="75" cy="75" r="60" fill="white" />
+        </svg> 
+        <img class="rpsH" src="/images/icon-paper.svg">
+      </div>
+
+      <div class="rpsDAD" id="p1s">
+        <svg class="rpsC" height="150" width="150">
+          <circle cx="75" cy="75" r="75" fill="yellow" />
+          <circle cx="75" cy="75" r="60" fill="white" />
+        </svg> 
+        <img class="rpsH" src="/images/icon-scissors.svg"/>
+      </div>
+    </div>
+
+
+    <div class="box2">
+      <p style="text-align: center;">The House Picked</p>
+      <br>
+      <br>
+      <div class="rpsDAD" id="p2r">
+        <svg class="rpsC" height="150" width="150">
+          <circle cx="75" cy="75" r="75" fill="red" />
+          <circle cx="75" cy="75" r="60" fill="white" />
+        </svg> 
+        <img class="rpsH" src="/images/icon-rock.svg"/>
+      </div>
+
+      <div class="rpsDAD" id="p2p">
+        <svg class="rpsC" height="150" width="150">
+          <circle cx="75" cy="75" r="75" fill="blue" />
+          <circle cx="75" cy="75" r="60" fill="white" />
+        </svg> 
+        <img class="rpsH" src="/images/icon-paper.svg">
+      </div>
+
+      <div class="rpsDAD" id="p2s">
+        <svg class="rpsC" height="150" width="150">
+          <circle cx="75" cy="75" r="75" fill="yellow" />
+          <circle cx="75" cy="75" r="60" fill="white" />
+        </svg> 
+        <img class="rpsH" src="/images/icon-scissors.svg"/>
+      </div>
+    </div>
+
+    <div>
+      <p id="YW" style="text-align: center; font-size: 50px;">You Win</p>
+      <p id="TA" style="text-align: center; font-size: 50px;">Try Again</p>
+      <p id="YL" style="text-align: center; font-size: 50px;">You Lose</p>
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <button type="button" class="popup" onclick="myFunction()" style="float: right;">Rules
+    <span class="popuptext" id="myPopup">
+      <h1>Rules</h1>
+      <img src="/images/image-rules.svg"/>
+    </span>
+  </button>
+</body>
+</html>
